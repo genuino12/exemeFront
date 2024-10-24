@@ -1,0 +1,39 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Interessados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="formInteressado" class="formulario">
+        <h1>Cadastro de Interessados</h1>
+        <form>
+           <div class="mb-3">
+              <label for="nome" class="form-label">Nome Completo:</label>
+              <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+           </div>
+           <div class="mb-3">
+              <label for="cpf" class="form-label">CPF:</label>
+              <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
+           </div>
+           <div class="mb-3">
+              <label for="email" class="form-label">E-mail:</label>
+              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+           </div>
+           <div class="mb-3">
+              <label for="telefone" class="form-label">Telefone:</label>
+              <input type="tel" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
+           </div>
+           <button type="submit" class="btn btn-primary">Cadastrar</button>
+           <div id="mensagem" class="alert"></div>
+        </form>
+     </div>
+     
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+    </html>
