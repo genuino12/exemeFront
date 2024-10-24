@@ -1,0 +1,23 @@
+{
+  "name": "exemefront",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genuino12/exemeFront.git"
+  },
+  "author": "Lucas Genuino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genuino12/exemeFront/issues"
+  },
+  "homepage": "https://github.com/genuino12/exemeFront#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
