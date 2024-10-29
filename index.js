@@ -19,7 +19,7 @@ app.get('/interessados', (req, res) => {
 
 app.post('/filhotes', (req, res) => {
     const tipo = req.body;
-    res.json({ message: 'Filhote registrado', tipo });
+    res.json({ message: 'Filhote registrado' });
 });
 
 
