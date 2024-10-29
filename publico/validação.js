@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('formInteressado');
-    const form2 = document.getElementById('formFilhote');
     const nomeInput = document.getElementById('nome');
     const nomeError = document.getElementById('nomeError');
     const cpfInput = document.getElementById('cpf');
@@ -9,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailError = document.getElementById('emailError');
     const telefoneInput = document.getElementById('telefone');
     const telefoneError = document.getElementById('telefoneError');
-    const especieInput = document.getElementById('especie');
-    const racaInput = document.getElementById('racaFilhote');
+   
 
     // Validação do primeiro formulário (Interessados)
     form.addEventListener('submit', function(event) {
@@ -26,6 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         cpfError.textContent = '';
 
         // Validação de Nome
+        if (!nomeInput) {
+            alert("Campo 'nome' não encontrado.");
+            return false;
+        }
+        
+        if (nome.trim() === "") {
+            alert("O campo nome não pode estar vazio.");
+            return false;
+        }
+        
         const regexNome = /^[a-zA-Zà-úÀ-Ú\s'-]+$/;
         if (!regexNome.test(nome)) {
             alert("Nome inválido! Insira apenas letras e espaços.");
@@ -55,29 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             alert('Cadastro realizado com sucesso!');
             form.reset();
-        }, 1000);
-    });
-
-    // Validação do segundo formulário (Filhotes)
-    form2.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const especie = especieInput.value.trim();
-        const raca = racaInput.value.trim();
-
-        if (especie === "") {
-            alert("Por favor, Prenche o Campo com a Especie do Seu animal.");
-            return;
-        }
-
-        if (raca === "") {
-            alert("Por favor, preencha o campo de raça.");
-            return;
-        }
-
-        setTimeout(() => {
-            alert('Cadastro de filhote realizado com sucesso!');
-            form2.reset();
         }, 1000);
     });
 
@@ -114,8 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return "";
     }
 
-    function validateEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
+
+    if (!validateEmail(email)) {
+        emailError.textContent = 'Por favor, insira um e-mail válido.';
+        return;
+}
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
 });

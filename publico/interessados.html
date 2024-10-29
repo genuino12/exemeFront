@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="formInteressado" class="formulario">
+    <div id="formInteressado" class="formulario" novalidate>
         <h1>Cadastro de Interessados</h1>
         <form>
            <div class="mb-3">
@@ -31,6 +31,7 @@
               <span id="telefoneError" class="error-message" style="color: red;"></span>
            </div>
            <button type="submit" class="btn btn-primary">Cadastrar</button>
+           <button id="cancelBtn" style="background-color: red; color: white;" type="reset">Cancelar</button>
            <div id="mensagem" class="alert"></div>
         </form>
      </div>
