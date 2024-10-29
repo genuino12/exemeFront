@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(() => {
             alert('Cadastro realizado com sucesso!');
-            form.reset();
+        
         }, 1000);
     });
 
