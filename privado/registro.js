@@ -279,4 +279,3 @@ function exibirMensagem(mensagem, cor = 'black') {
         divMensagem.innerHTML = "";
     }, 5000);
 }
-export {gravarInteressado,gravarFilhote,atualizarInteressado,atualizarFilhote,deletarInteressado,deletarFilhote, buscarInteressados, buscarFilhotes};
