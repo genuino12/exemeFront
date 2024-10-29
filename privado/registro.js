@@ -214,7 +214,7 @@ function exibirFilhotes(filhotes) {
     divFilhotes.innerHTML = "";  
 }
 function atualizarFilhote() {
-    const id = document.getElementById('filhoteId').value; // Obtenha o ID do filhote a ser atualizado
+    const id = document.getElementById('filhoteId').value; 
     const especie = document.getElementById('especie').value;
     const raca = document.getElementById('raca').value;
 
@@ -279,3 +279,4 @@ function exibirMensagem(mensagem, cor = 'black') {
         divMensagem.innerHTML = "";
     }, 5000);
 }
+export {gravarInteressado,gravarFilhote,atualizarInteressado,atualizarFilhote,deletarInteressado,deletarFilhote, buscarInteressados, buscarFilhotes};
